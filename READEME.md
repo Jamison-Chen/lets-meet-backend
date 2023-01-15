@@ -1,5 +1,13 @@
 # Let's Meet
 
+## 環境要求
+
+---
+
+* [Git 2.35 +](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+* [MongoDB @6.0](https://www.mongodb.com/docs/manual/installation/)
+
 ## 建置開發環境
 
 ---

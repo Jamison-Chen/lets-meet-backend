@@ -1,10 +1,10 @@
 import { Router } from "express";
 
-import views from "./views";
+import views from "./apis";
 
 const router = Router();
 
-router.get("/ping", views.ping);
-router.post("/post", views.test_post);
+router.get(/^\/ping[/]?$/, views.ping);
+router.post(/^\/create-user[/]?$/, views.createUser);
 
 export default router;
