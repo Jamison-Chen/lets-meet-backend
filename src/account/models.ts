@@ -3,6 +3,7 @@ import { Schema, Model, model } from "mongoose";
 interface IUser {
     name: string;
     email: string;
+    passwordHash: string;
 }
 
 const userSchema: Schema<IUser> = new Schema<IUser>({
@@ -19,6 +20,7 @@ const userSchema: Schema<IUser> = new Schema<IUser>({
         unique: true,
         match: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
     },
+    passwordHash: String,
 });
 
 export const User: Model<IUser> = model("User", userSchema);
