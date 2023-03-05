@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import url from "url";
 
-export function logger(
+export function loggerMiddleware(
     request: Request,
     response: Response,
     next: NextFunction

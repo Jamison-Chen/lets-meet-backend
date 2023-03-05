@@ -16,6 +16,8 @@ mongoose.connect(
     `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
 );
 
+// app.set("etag", false);
+
 // Apply all middlewares
 app.use(middleware);
 

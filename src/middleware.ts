@@ -2,10 +2,10 @@ import express from "express";
 import cors from "cors";
 
 import { authorizationMiddleware } from "./account";
-import { logger } from "./core";
+import { loggerMiddleware } from "./core";
 
 export default [
-    logger,
+    loggerMiddleware,
     cors(),
     express.urlencoded({ extended: true }),
     express.json(),

@@ -1,1 +1,1 @@
-export { logger } from "./middleware";
+export { loggerMiddleware } from "./middleware";

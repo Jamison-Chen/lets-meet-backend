@@ -3,7 +3,8 @@ import { Schema, Model, model } from "mongoose";
 interface IUser {
     name: string;
     email: string;
-    passwordHash: string;
+    avatarUrl?: string;
+    passwordHash?: string;
 }
 
 const userSchema: Schema<IUser> = new Schema<IUser>({
@@ -19,6 +20,10 @@ const userSchema: Schema<IUser> = new Schema<IUser>({
         require: true,
         unique: true,
         match: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+    },
+    avatarUrl: {
+        type: String,
+        match: /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/,
     },
     passwordHash: String,
 });
