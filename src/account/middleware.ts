@@ -5,5 +5,6 @@ export function authorizationMiddleware(
     response: Response,
     next: NextFunction
 ): void {
+    // TODO
     next();
 }

@@ -2,15 +2,11 @@
 
 ## 環境要求
 
----
-
 * [Git 2.35 +](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 * [MongoDB @6.0](https://www.mongodb.com/docs/manual/installation/)
 
 ## 建置開發環境
-
----
 
 ### 步驟一：安裝套件
 
@@ -18,14 +14,13 @@
 npm install
 ```
 
-### 步驟二：初始化資料庫
+### 步驟二：建立 `.env`
 
-```sh
+```bash
+sh create_env_file.sh
 ```
 
 ## 常用指令
-
----
 
 ### 在開發環境中啟動 server
 
@@ -43,4 +38,4 @@ npx nodemon ./src/index.ts
 
 ## 建置正式環境
 
----
+TODO

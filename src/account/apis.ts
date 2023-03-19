@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import bcrypt from "bcryptjs";
 
 import { User } from "./models";
+import { wait } from "./utils";
 
 export async function register(
     request: Request,
@@ -83,9 +84,5 @@ export async function ping(
         message: request.query.message,
     });
 }
-
-const wait = (ms: number) => {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-};
 
 export * as default from "./apis";
